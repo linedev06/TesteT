@@ -1,0 +1,29 @@
+name: tekton
+description: "A new Flutter project."
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  image_picker: ^0.8.5  # Corrigido para a versão estável mais recente
+  permission_handler: ^11.3.1 
+
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  assets:
+    - assets/images/tekton.jpeg
+    - assets/images/logo_appbar.png
+    - assets/images/logo_azul.png
+
+  uses-material-design: true
