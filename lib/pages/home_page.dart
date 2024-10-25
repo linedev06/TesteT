@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:tekton/components/custom_drawer.dart';
+import 'package:tekton/pages/basico.dart';
+import 'package:tekton/pages/models.dart';
+import 'package:tekton/pages/lobby.dart';
 
 class TektonHomePage extends StatelessWidget {
   @override
@@ -9,21 +12,10 @@ class TektonHomePage extends StatelessWidget {
         centerTitle: true,
         title: Center(
           child: Image.asset(
-            'assets/images/logo_appbar.png', 
-            height: 70, 
+            'assets/images/logo_appbar.png',
+            height: 70,
           ),
         ),
-        actions: [
-          Icon(Icons.notifications_off),
-          Padding(
-            padding: EdgeInsets.only(right: 16),
-            child: Icon(Icons.signal_wifi_4_bar),
-          ),
-          Padding(
-            padding: EdgeInsets.only(right: 16),
-            child: Icon(Icons.battery_full),
-          ),
-        ],
       ),
       drawer: CustomDrawer(), // Usa o CustomDrawer componentizado
       body: SingleChildScrollView(
@@ -62,7 +54,12 @@ class TektonHomePage extends StatelessWidget {
                   Column(
                     children: [
                       ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(builder: (context) => ModelsPage()),
+                          );
+                        },
                         child: Text('Modelos Prontos'),
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.white,
@@ -71,8 +68,9 @@ class TektonHomePage extends StatelessWidget {
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.zero, // Borda quadrada
                             side: BorderSide(
-                                color: Color(0xFFFF9A00),
-                                width: 2), // Cor e espessura da borda
+                              color: Color(0xFFFF9A00),
+                              width: 2,
+                            ), // Cor e espessura da borda
                           ),
                           padding: EdgeInsets.symmetric(vertical: 35),
                           textStyle: TextStyle(fontSize: 18),
@@ -80,7 +78,12 @@ class TektonHomePage extends StatelessWidget {
                       ),
                       SizedBox(height: 20), // Espaço entre os botões
                       ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => Mbasico()),
+                          );
+                        },
                         child: Text('Modelos Básicos'),
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.white,
@@ -95,9 +98,12 @@ class TektonHomePage extends StatelessWidget {
                           textStyle: TextStyle(fontSize: 18),
                         ),
                       ),
+
                       SizedBox(height: 20),
                       ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          // Ação para Projetos Modificados (se houver)
+                        },
                         child: Text('Projetos Modificados'),
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.white,
@@ -105,8 +111,7 @@ class TektonHomePage extends StatelessWidget {
                           minimumSize: Size(double.infinity, 60),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.zero,
-                            side:
-                                BorderSide(color: Color(0xFFFF9A00), width: 2),
+                            side: BorderSide(color: Color(0xFFFF9A00), width: 2),
                           ),
                           padding: EdgeInsets.symmetric(vertical: 35),
                           textStyle: TextStyle(fontSize: 18),
@@ -114,7 +119,12 @@ class TektonHomePage extends StatelessWidget {
                       ),
                       SizedBox(height: 20),
                       ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(builder: (context) => lobby()), // Verifique se o nome da classe é "Lobby"
+                          );
+                        },
                         child: Text('Projetos Personalizados'),
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.white,
@@ -122,8 +132,7 @@ class TektonHomePage extends StatelessWidget {
                           minimumSize: Size(double.infinity, 60),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.zero,
-                            side:
-                                BorderSide(color: Color(0xFFFF9A00), width: 2),
+                            side: BorderSide(color: Color(0xFFFF9A00), width: 2),
                           ),
                           padding: EdgeInsets.symmetric(vertical: 35),
                           textStyle: TextStyle(fontSize: 18),
