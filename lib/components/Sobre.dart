@@ -32,7 +32,7 @@ class SobrePage extends StatelessWidget {
 appBar: AppBar(
   backgroundColor: Color(0xFF1B263B),
   title: Padding(
-    padding: const EdgeInsets.only(left: 130), // Ajuste o valor conforme necessário
+    padding: const EdgeInsets.only(left: 120), // Ajuste o valor conforme necessário
     child: Image.asset('assets/images/logo_appbar.png', height: 90),
   ),
   leading: IconButton(

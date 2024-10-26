@@ -26,14 +26,14 @@ class UserProfilePage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Perfil do Usuário'),
         centerTitle: true,
-       leading: IconButton( // Coloque o botão de voltar aqui
+       leading: IconButton( 
           icon: Icon(Icons.arrow_back),
           onPressed: () {
-            // Redireciona diretamente para a tela do lobby
+          
             Navigator.pushAndRemoveUntil(
               context,
               MaterialPageRoute(builder: (context) => lobby()),
-              (route) => false, // Remove todas as rotas anteriores
+              (route) => false, 
             );
           },
         ),

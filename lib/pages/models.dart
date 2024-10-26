@@ -109,7 +109,7 @@ Expanded(
         price: 'R\$ 1.800.000 Venda',
       ),
       PropertyCard(
-        imageUrl: 'images/architecture4.jpg',
+        imageUrl: 'images/Chacara1.jpg',
         title: 'Chácara Vale Verde - SP',
         size: '5,000.00 m²',
         bedrooms: '6 Quartos',
@@ -117,7 +117,7 @@ Expanded(
         price: 'R\$ 3.000.000 Venda',
       ),
       PropertyCard(
-        imageUrl: 'images/architecture5.jpg',
+        imageUrl: 'images/Campos.jpg',
         title: 'Casa de Campo em Campos do Jordão - SP',
         size: '400.00 m²',
         bedrooms: '5 Quartos',
@@ -125,7 +125,7 @@ Expanded(
         price: 'R\$ 2.500.000 Venda',
       ),
       PropertyCard(
-        imageUrl: 'images/architecture6.jpg',
+        imageUrl: 'images/sonho.jpg',
         title: 'Chácara dos Sonhos - SP',
         size: '3,200.00 m²',
         bedrooms: '4 Quartos',

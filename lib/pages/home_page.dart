@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tekton/components/custom_drawer.dart';
+import 'package:tekton/pages/Ideias.dart';
 import 'package:tekton/pages/basico.dart';
 import 'package:tekton/pages/models.dart';
 import 'package:tekton/pages/lobby.dart';
@@ -15,13 +16,13 @@ class TektonHomePage extends StatelessWidget {
             SizedBox(width: 130), // Ajuste a largura conforme necessário
             Image.asset(
               'assets/images/logo_appbar.png',
-              height: 70,
+              height: 90,
             ),
           ],
         ),
         backgroundColor: Color.fromARGB(255, 255, 255, 255), // Cor de fundo do AppBar
       ),
-       drawer: CustomDrawer(),
+      drawer: CustomDrawer(),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -78,7 +79,7 @@ class TektonHomePage extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
               child: Column(
                 children: [
-                  // Usando cartões para os botões
+                  // Botões de navegação
                   _buildCardButton(context, 'Modelos Prontos', ModelsPage(), Icons.house),
                   SizedBox(height: 20),
                   _buildCardButton(context, 'Modelos Básicos', Mbasico(), Icons.handshake),
@@ -86,7 +87,10 @@ class TektonHomePage extends StatelessWidget {
                   _buildCardButton(context, 'Projetos Modificados', Modificados(), Icons.build),
                   SizedBox(height: 20),
                   _buildCardButton(context, 'Projetos Personalizados', lobby(), Icons.edit),
-                  SizedBox(height: 40), // Espaçamento extra para o botão de contato
+                  SizedBox(height: 80),
+                  _buildCardButton(context, 'Ideias', IdeiasPage(), Icons.lightbulb_outline),
+                  SizedBox(height: 20),
+                  
                 ],
               ),
             ),
@@ -96,7 +100,6 @@ class TektonHomePage extends StatelessWidget {
     );
   }
 
- 
   // Método auxiliar para criar um cartão estilizado
   Widget _buildCardButton(BuildContext context, String label, Widget page, IconData icon) {
     return GestureDetector(
@@ -138,4 +141,6 @@ class TektonHomePage extends StatelessWidget {
       ),
     );
   }
-}
+
+
+ }
