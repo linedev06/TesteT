@@ -3,6 +3,7 @@ import 'package:tekton/components/custom_drawer.dart';
 import 'package:tekton/pages/basico.dart';
 import 'package:tekton/pages/models.dart';
 import 'package:tekton/pages/lobby.dart';
+import 'package:tekton/pages/modificados.dart';
 
 class TektonHomePage extends StatelessWidget {
   @override
@@ -99,10 +100,13 @@ class TektonHomePage extends StatelessWidget {
                         ),
                       ),
 
-                      SizedBox(height: 20),
+                       SizedBox(height: 20),
                       ElevatedButton(
                         onPressed: () {
-                          // Ação para Projetos Modificados (se houver)
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(builder: (context) => Modificados()), // Verifique se o nome da classe é "Lobby"
+                          );
                         },
                         child: Text('Projetos Modificados'),
                         style: ElevatedButton.styleFrom(
