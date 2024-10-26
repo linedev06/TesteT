@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:tekton/components/Contato.dart';
+import 'package:tekton/components/Sobre.dart';
 import 'package:tekton/pages/chat_geral.dart';
+
+
 
 class CustomDrawer extends StatelessWidget {
   @override
@@ -32,29 +36,23 @@ class CustomDrawer extends StatelessWidget {
             leading: Icon(Icons.account_balance),
             title: Text('Sobre Nós'),
             onTap: () {
-              Navigator.pop(context);
+             Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(builder: (context) => Sobre()),
+                          );
             },
           ),
           ListTile(
             leading: Icon(Icons.people),
             title: Text('Contatos'),
-            onTap: () {
-              Navigator.pop(context);
+              onTap: () {
+             Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(builder: (context) => Contato()),
+                          );
             },
           ),
-          ListTile(
-            leading: Icon(Icons.chat),
-            title: Text('Chat'),
-            onTap: () {
-              Navigator.pop(context); // Fecha o drawer
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) =>
-                        ChatGeralScreen()), // Navega para a tela ChatScreen
-              );
-            },
-          ),
+      
         ],
       ),
     );
